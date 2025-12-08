@@ -1,0 +1,52 @@
+class ColaEstatica:
+    def __init__ (self, tamaño_maximo): #self: para especificar que dato viene despues
+        self.tamaño_maximo = tamaño_maximo #igualar a la variable
+        self.cola = [] #inicia directamente la cola
+
+    def esta_vacia(self):
+        return len (self.cola)==0 #==0: nos dice que la cola está vacía
+
+    def esta_llena(self):
+        return len (self.cola)== self.tamaño_maximo #se especifica el tamaño máximo
+
+    def enqueue(self, elemento): #enqueue para agregar un elemento
+        if self.esta_llena():#utilizar cuando la cola ya está llena
+            print("Error: La cola está llena")
+        else:
+            self.cola.append(elemento) #para agregar elemento
+
+    def dequeue(self): #dequeue para eliminar
+        if self.esta_vacia():
+            print("La cola esta vaía, no puedes eliminar")
+        else:
+            return self.cola.pop(0)
+
+    def peek(self): #para ver cual va primero
+        if self.esta_vacia():
+            return None #retornar un numero no definido
+        return self.cola[0] #retorna directamente la matriz
+
+    def size(self): #ver los datos especificos de manera ordenada
+        return len(self.cola)
+
+    def clear(self): #eliminar toda la cola
+        self.cola.clear()
+
+    def ver_todos(self): 
+        return self.cola
+
+#probar datos
+cola=ColaEstatica(3)
+#agregar elementos
+cola.enqueue(1)
+cola.enqueue(2)
+cola.enqueue(3)
+cola.enqueue(4)
+print("La cola despues de agregar 3 elementos: ", cola.ver_todos())
+
+#dato en la cima
+print("El dato en la cima de cola es: ", cola.peek())
+print("El tamaño de la cola es: ", cola.size())
+print("La cola despues de eliminar es: ", cola.ver_todos())
+
+#tamaño

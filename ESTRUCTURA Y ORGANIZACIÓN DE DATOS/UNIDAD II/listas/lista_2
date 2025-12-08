@@ -1,0 +1,38 @@
+gestemani=[]
+getsemani.append("Getsemani Jezabel Yamile")
+getsemani.append(22)
+getsemani.append("Fumar")
+getsemani.append("Voleybol")
+print("mi lista es: ", getsemani)
+
+getsemani.remove(22)
+print("lista con dato eliminado: ", getsemani)
+
+elemento=getsemani.pop(2)
+print ("el dato eliminado es: ",elemento)
+print ("la lista con elemento eliminado es: ", getsemani)
+
+existe = "Leslye" in getsemani
+print ("¿Existe el nombre Getsemani en la lista? ",existe)
+existe = 22 in getsemani
+print("¿Existe la edad 22 en la lista? ", existe)
+existe = "Fumar" in getsemani
+print("existe el hobbie es Fumar en la lista? ", existe)
+existe = "Voleybol" in getsemani
+print("¿Existe el deporte Voleybol en la lista? ", existe)
+
+indice = getsemani.index("Getsemani")
+print ("La posicion en donde se encuentra Getsemani es: ", indice)
+
+print ("Los elementos son: ", getsemani)
+
+for elemento1 in getsemani:
+    print("el elemento es: ", elemento1)
+
+getsemani.extend(["TICS", "El Camaron", "Lucero"])
+print("Despues de agregar mas elementos a mi lista es: ", getsemani)
+
+print("La longitud de la lista es: ",len(getsemani))
+
+getsemani.clear()
+print("La lista vacía es: ", getsemani)

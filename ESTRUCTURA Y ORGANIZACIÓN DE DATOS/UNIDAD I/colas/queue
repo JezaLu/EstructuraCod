@@ -1,0 +1,14 @@
+#Libreria queue, esta libreria nos ayuda a identificar cuantos datos tenemos
+from queue import Queue
+cola=Queue()
+#Se agregan los valores en la cola
+cola.put("a")#.put para insertar valores dentro de esta libreria
+cola.put("b")
+cola.put("c")
+cola.put("d")
+cola.put("e")
+cola.put("f")
+print("La cola es: ",cola.qsize())#.qsize te dice el numero de datos que tienes en tu cola
+elemento=cola.get()#.get para eliminar un valor
+print("Elemento eliminado:",elemento)
+print("La cola despues de:",cola.qsize())

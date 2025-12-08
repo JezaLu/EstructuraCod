@@ -1,0 +1,24 @@
+pila=[]#Se crea la pila
+#Se le agregan valores a la pila
+pila.append("a")
+pila.append("b")
+pila.append("c")
+pila.append(23)
+pila.append("d")
+pila.append(63)
+pila.append(92)
+pila.append("e")
+pila.append("f")
+pila.append(22)
+pila.append("g")
+pila.append(7)
+pila.append(6)
+pila.append("h")
+pila.append(0)
+print("La pilas es:",pila)#Se imprime la pila completa
+elemento=pila.pop()#Se elima el ultimo valor de la pila con .pop
+print("Elemeto eliminado",elemento)
+print("La pila despues de:",pila)
+elemento=pila.pop()
+print("Elemeto eliminado",elemento)
+print("La pila despues de:",pila)

@@ -1,0 +1,7 @@
+arreglo=["a","b","c","d"]#Se crea el arreglo
+del arreglo[1]#del para eliminar un valor en una posición
+print(arreglo)#Se imprime el arreglo
+
+arreglo1=["tics","admin","iias"]#se crea el arreglo
+arreglo1.remove("iias")#.remove para eliminar un valor en específico
+print(arreglo1)# solo imprime tics y admin

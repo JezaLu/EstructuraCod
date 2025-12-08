@@ -1,0 +1,7 @@
+lista=[1,4,"lapicero","cocodrilo"]#se crea la lista
+print(lista)#se imprime la lista
+print("flor de", lista[3])#imprimir solo 1 dato
+lista.append("azucena")#.append para agregar 1 valor al último
+print(lista)#se imprime la lista
+lista.remove("azucena")#.remove para eliminar un valor
+print(lista)

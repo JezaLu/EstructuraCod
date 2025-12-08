@@ -1,0 +1,11 @@
+palabras=["bicicleta","carro","avion","moto","barco"]
+palabras.insert(0,"bus")
+print(palabras)
+palabras.clear()
+print(palabras)
+
+numeros=[1,2,3,4,5,6,7,8]
+numeros.insert(0,9)
+print(numeros)
+numeros.clear()
+print(numeros)

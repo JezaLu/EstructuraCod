@@ -1,0 +1,48 @@
+carreras=10
+pila=[]
+
+def push(elemento): 
+    if len(pila) <carreras: 
+        pila.append(elemento)
+        print("Carrera agregada", elemento)
+
+    else: 
+        print("La pila está llena")
+
+def peek():
+    if len(pila) >0:
+        print("Carrera en la cima", pila[-1])
+    else: print("La pila está vacía")
+
+def mostrar():
+    if pila:
+        print("Pila cima-base", list(reversed(pila)))
+
+    else:
+        print("Pila vacia")
+
+def menu():
+    while True:
+        print("Menu de mi pila: ")
+        print("1. Agregar carrera(push): ")
+        print("2. Elemento en la cima (peek): ")
+        print("3. Mostrar carrera: ")
+        print("4. Salir")
+    
+        opcion=input("Selecciona una opcion:(1-4)")
+        
+        if opcion=="1":
+            valor=input("Ingresa la carrera: ")
+            push(valor)
+        elif opcion =="2":
+            peek()
+        elif opcion == "3":
+            mostrar()
+        elif opcion == "4":
+            print("Salirse del programa")
+            break
+        else:
+            print("Ingresaste un dato inválido")
+
+if __name__ == "__main__":
+    menu()

@@ -1,0 +1,29 @@
+#crear una lista vacia
+#agregar mi nombre,edad,fecha de nacimiento,genero,hoobie, agregar en consola
+#eliminar hoobie
+#buscar la edad y nos debe de dar verdadero
+#insertar lugar de nacimiento, carrera en la que estudiamos y que esperamos ganar al momento de trabajar en un futuro, agg los 3 a la misma vez
+#imprimir la longitud de la lista
+#volver a agregar 2 cosas que mas me gusten 
+#ordenar la lista 
+#dejar la lista vacia
+class Palabra:
+    def __init__(self,letra):
+        self.letra = letra
+        self.siguiente = None
+
+l1 = Palabra ("Getsemani")
+l2 = Palabra ("Jesus")
+l3 = Palabra ("Miguel")
+l4 = Palabra ("Gael")
+l5 = Palabra ("Ricardo")
+
+l1.siguiente = l2
+l2.siguiente = l3
+l3.siguiente = l4
+l4.siguiente = l5
+
+act = l1
+while act is not None:
+    print(act.letra)
+    act = act.siguiente

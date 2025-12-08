@@ -1,0 +1,55 @@
+#crear lista vacía
+lista = []
+lista.append(10)
+lista.append(20)
+lista.append(30)
+lista.append(40)
+lista.append(50)
+print ("El resultado de mi lista es: ", lista)
+
+#Eliminar un valor en específico
+lista.remove(40)
+print("La lista despues de eliminar el numero 40 es: ",lista)
+
+#Eliminar por indice
+elem= lista.pop(1)
+print("El numero eliminado es: ", elem)
+print("La lista despues de eliminar es: ", lista)
+
+#Buscar elementos
+existe1= 10 in lista
+print("¿Existe el numero 10 en mi lista?", existe1)
+
+existe2= 20 in lista
+print ("¿Existe el numero 20 en mi lista?", existe2)
+
+existe3= 30 in lista
+print ("¿Existe el numero 30 en mi lista?", existe3)
+
+existe4= 40 in lista
+print ("¿Existe el numero 40 en mi lista?", existe4)
+
+existe5= 50 in lista
+print ("¿Existe el numero 50 en mi lista?", existe5)
+
+#imprimir la posición del numero
+indice = lista.index(50)
+print("La posición es: ", indice)
+
+#Mostrar elementos
+print("Los elementos son: ", lista)
+
+#Recorrer elementos
+for elemento in lista:
+    print("Elemento", elemento)
+
+#Insertar multiples elementos
+lista.extend([160,110,120,130,60,70,80,90,100])
+print("despues de agregar multiples datos la lista es: ", lista)
+
+#Saber la longitus de la lista
+print("La longitud es: ",len(lista))
+
+#Ordenar mi lista
+lista.sort()
+print("Mi lista ordenada es: ", lista)

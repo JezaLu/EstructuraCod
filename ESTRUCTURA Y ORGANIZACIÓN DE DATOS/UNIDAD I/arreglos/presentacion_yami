@@ -1,0 +1,7 @@
+arreglo=["Getsemani","Fumar",22,53.500,"TICS"]#creamos el arreglo
+#se imprimen los valores por posición
+print("Mi nombre es: ",arreglo[0])
+print("Me gusta: ",arreglo[1])
+print("Tengo: ",arreglo[2],"años")
+print("mi peso es: ",arreglo[3],"kg")
+print("Mi carrera es: Ing.", arreglo[4])

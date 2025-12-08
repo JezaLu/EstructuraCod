@@ -1,0 +1,66 @@
+class NodoBB:
+    def __init__(self,valor):
+        self.valor=valor
+        self.izquierda=None
+        self.derecha=None
+
+def insertar (nodo,valor):
+    if nodo is None:
+        return NodoBB(valor)
+    if valor < nodo.valor:
+        nodo.izquierda = insertar(nodo.izquierda, valor)
+    else:
+        nodo.derecha = insertar(nodo.derecha, valor)
+        return nodo
+    
+#busqueda
+def buscar(nodo, valor):
+    if nodo is None:
+        return False
+    if nodo.valor == valor:
+        return True
+    elif valor < nodo.valor:
+        return buscar(nodo.izquierda, valor)
+    else:
+        return buscar(nodo.derecha, valor)
+    
+#inorden
+def inorden(nodo):
+    if nodo:
+        inorden(nodo.izquierda)
+        print(nodo.valor, end="") #ende: terminar cuando no tiene un valor definido
+        inorden(nodo.derecha)
+
+raiz = None
+print("Arbol de busqueda")
+valores = input("Ingresa los valores separados por un espacio")
+valores=[int(v) for v in valores.split()]#.split para separar por espacios
+
+for v in valores:
+    raiz=insertar(raiz, v)
+
+print("El orden de mi arbol es: ")
+inorden(raiz)
+
+#busqueda
+while True:
+    opcion=input("¿Desea buscar algun valor? (s/n)").lower() #lower es para que ponga automaticamente en minuscula
+    if opcion != "s":
+        break
+    valor_buscar = int(input("Ingresa el valor a buscar que sea un numero"))
+    encontrar = buscar(raiz, valor_buscar)
+    if encontrar:
+        print("El valor si está en el arbol")
+    else:
+        print("El valor no está en el arbol")
+
+#pruebas
+#raiz = None
+#valores = [1,3,4,1,5,7,9,11,14,10]
+#for v in valores:
+    #raiz = insertar(raiz,v)
+#print("Arbol en orden")
+#inorden(raiz)
+
+#print("buscar", buscar(raiz,11))
+#print("buscar", buscar(raiz,20))

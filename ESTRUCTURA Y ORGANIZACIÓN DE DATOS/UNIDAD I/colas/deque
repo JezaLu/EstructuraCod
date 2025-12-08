@@ -1,0 +1,14 @@
+from collections import deque # utilizar la librería deque
+cola=deque()#se crea una cola vacia
+#se agregan valores a la cola con .append
+cola.append(565)
+cola.append("tics")
+cola.append(55)
+cola.append("iias")
+cola.append(16)
+cola.append("admin")
+print("La cola es: ",list(cola))#se imprime la cola
+#Para eliminr el primer dato de la cola sin posición
+elemento=cola.popleft()
+print("El dato eliminado es: ",elemento)#muestra el dato eliminado
+print("La cola despues de: ",list(cola))#muestra la cola despues de elimanr el valor

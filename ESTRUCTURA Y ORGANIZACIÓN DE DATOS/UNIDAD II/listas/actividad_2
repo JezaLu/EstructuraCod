@@ -1,0 +1,31 @@
+Lista=[]
+l1 = input ("Ingresa tu nombre: ")
+l2 = int(input ("Ingresa tu edad: "))
+l3 = int(input ("Ingresa tu año de nacimiento: "))
+l4 = input ("Ingresa tu genero: ")
+l5 = input ("Ingresa tu hobbie: ")
+Lista = [l1,l2,l3,l4,l5]
+print (Lista)
+
+elemento=Lista.pop(4)
+print ("el dato eliminado es: ",elemento)
+print ("la lista con elemento eliminado es: ", Lista)
+
+existe = l2 in Lista
+print ("¿La edad existe en mi lista? ", existe)
+
+Lista.extend(["Nací en tlacolula ", "Estudio Ing. TIC'S "])
+l5 = int(input ("Ingresa lo que quieres ganar en un futuro: "))
+print("despues de agregar multiples datos la lista es: ", Lista)
+
+print("La longitud de la lista es: ",len(Lista))
+
+Lista.extend(["Me gusta andar en bicicleta ", "Me gusta bailar"])
+print("Despues de agregar mas elementos a mi lista es: ",Lista)
+
+numeros =([l2,l3,l5])
+numeros.sort()
+print("Los números ordenados son: ", numeros)
+
+Lista.clear()
+print("La lista vacía es: ", Lista)

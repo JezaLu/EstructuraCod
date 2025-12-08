@@ -1,0 +1,28 @@
+capacidad=20
+pila=[]
+
+def push (elemento):
+    if len (pila) < capacidad:
+        pila.append(elemento)
+        print("elemento agregado: ", elemento)
+
+    else:
+        print("La pila esta llena") 
+
+def pop ():
+    if len (pila) > 0:
+        elemento=pila.pop()
+        print ("elemento eliminado: ", elemento)
+
+    else:
+        print("La pila esta vacia")
+
+def peek ():
+    if len (pila) > 0:
+        print ("Elemento en la cima: ", pila[-1])
+
+    else:
+        print("La lista esta vacia")
+
+def mostrar ():
+    print("pila (clima-base)", list(reversed(pila)))

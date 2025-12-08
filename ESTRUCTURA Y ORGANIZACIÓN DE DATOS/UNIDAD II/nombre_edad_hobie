@@ -1,0 +1,66 @@
+#nombre,edad,hobie
+lista =[]
+lista.append("Getsemani Jezabel Yamile Lucero Martinez")
+print("Mi nombre es: ",lista)
+
+lista.append("22")
+print("Mi edad es: ",lista[1])
+
+lista.append("Ver películas")
+print("Mi hobbie favorito es: ",lista[2])
+
+lista.append("Fumar")
+print("Lo que mas hago es: ",lista[3])
+
+lista.extend([22,30,27,8,2003,1998,67,34,55])
+print("despues de agregar multiples datos la lista es: ", lista)
+
+lista.remove(67)
+print("La lista despues de eliminar fumar: ",lista)
+
+elem= lista.pop(10)
+print("El numero eliminado es: ", elem)
+print("La lista despues de eliminar es: ", lista)
+
+existe1= "Getsemani Jezabel Yamile Lucero Martinez" in lista
+print("¿Existe Getsemani Jezabel Yamile Lucero Martinez en mi lista?", existe1)
+
+existe2= 22 in lista
+print("¿Existe el numero 22 en mi lista?", existe2)
+
+existe3= "Ver peliculas" in lista
+print("¿Existe Ver peliculas en mi lista?", existe3)
+
+existe4= "Fumar" in lista
+print("¿Existe Fumar en mi lista?", existe4)
+
+existe5= 22 in lista
+print("¿Existe 22 en mi lista?", existe5)
+
+existe6= 30 in lista
+print("¿Existe el numero 30 en mi lista?", existe6)
+
+existe7= 27 in lista
+print("¿Existe el numero 27 en mi lista?", existe7)
+
+existe8= 8 in lista
+print("¿Existe el numero 8 en mi lista?", existe8)
+
+existe9= 2003 in lista
+print("¿Existe el numero 2003 en mi lista?", existe9)
+
+existe10= 1998 in lista
+print("¿Existe el numero 1998 en mi lista?", existe10)
+
+existe11= 55 in lista
+print("¿Existe el numero 55 en mi lista?", existe11)
+
+indice = lista.index(27)
+print("La posición es: ", indice)
+
+print("Los elementos son: ", lista)
+
+for elemento in lista:
+    print("Elemento", elemento)
+
+print("La longitud es: ",len(lista))

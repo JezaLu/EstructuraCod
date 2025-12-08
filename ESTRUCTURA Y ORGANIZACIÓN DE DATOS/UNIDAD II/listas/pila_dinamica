@@ -1,0 +1,38 @@
+#PILA DINÁMICA
+cima=None
+
+def push(dato):
+    global cima #global: para que acepte cualquier tipo de dato
+    nuevo = {
+        "dato":dato,
+        "siguiente":cima
+    }
+    cima = nuevo
+    print("Elemento agregado: ", dato)
+
+def pop():
+    global cima
+    if cima is not None: 
+        print("Elemento eliminado", cima["dato"])
+        cima = cima("siguiente")
+    else:
+        print("La pila está vacía")
+
+def peek():
+    if cima is not None:
+        print("Elemento en la cima: ", cima["dato"])
+    else:
+        print("La pila está vacía")
+
+def mostrar():
+    actual=cima
+    elementos=[]
+    while actual is not None:
+        elementos.append(actual["dato"])
+        actual=actual["siguiente"]
+        print("La pila es(cima-base)", elementos)
+
+push("A")
+push("B")
+push("C")
+mostrar()

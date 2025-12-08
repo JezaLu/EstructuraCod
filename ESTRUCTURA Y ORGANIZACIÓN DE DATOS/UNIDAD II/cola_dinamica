@@ -1,0 +1,106 @@
+from collections import deque #conectar la libreria con la aplicación
+
+class Cola: 
+    def __init__(self): #def:especificar los métodos
+        self.items = deque() #self.items para hacer igualación con la librería
+
+    def encolar(self, item): #item: es para poder ir agregando datos
+        self.items.append(item)
+
+    def desencolar(self): #desencolar: eliminar datos
+        if not self.esta_vacia():
+            return self.items.popleft()
+        else:
+            return None 
+        
+    def frente(self): #mostrar elemento de enfrente
+        if not self.esta_vacia():
+            return self.items[0]
+        else:
+            return None
+    
+    def esta_vacia(self): #probar si está vacía
+        return len(self.items)==0
+    
+    def tamaño(self): #mostrar tamaño de la cola
+        return len(self.items)
+
+    def mostrar(self): #mostrar cola
+        print("La cola es: ", list(self.items))
+
+def menu():
+        cola = Cola()
+
+        while True: #para especificar elementos a especificar en el bucle
+            print("Menú de cola")
+            print("1.Encolar")
+            print("2.Desencolar")
+            print("3.Frente")
+            print("4.Está vacía?")
+            print("5.Tamaño de la cola")
+            print("6.Mostrar")
+            print("7.Salir")
+
+            opcion = input("Selecciona una opción:")
+            if opcion=="1":
+                elemento=input("Agrega nuevo elemento")
+                cola.encolar(elemento)
+                print("Elemento agregado", elemento)
+
+            elif opcion=="2":
+                elemento=cola.desencolar()
+                if elemento is not None:
+                    print("Elemento eliminado es ", elemento)
+                else:
+                    print("La cola está vacía ")
+                    
+            elif opcion=="3":
+                frente=cola.frente()
+                if frente is not None:
+                    print("El frente de la cola es ", frente)
+                else:
+                    print("La cola está vacía")
+            
+            elif opcion=="4":
+                print("La cola está vacía?: ","Si" if cola.esta_vacia()else "No")
+
+            elif opcion=="5":
+                print("El tamaño de la cola es", cola.tamaño())
+
+            elif opcion=="6":
+                print("La cola es: ", cola.mostrar())
+
+            elif opcion=="7":
+                print("Saliste del programa")
+                break
+            else:
+                print("Dato inválido")
+if __name__== "__main__":
+    menu()
+
+
+#probar elementos
+#cola = Cola()
+#cola.encolar("A")
+#cola.encolar("B")
+#cola.encolar("C")
+#cola.encolar("D")
+#cola.encolar("E")
+
+#cola.mostrar()
+
+#mostrar frente de la cola
+#print("El frente es: ", cola.frente())
+
+#para eliminar datos
+#print("El dato eliminado es: ", cola.desencolar())
+
+#mostrar
+#cola.mostrar()
+
+#mostrar si la cola esta vacía, en este caso aparece false porque no está vacía3
+#print("¿La cola está vacía?: ", cola.esta_vacia())
+
+#tamaño
+#print("El tamaño es: ", cola.tamaño())
+ 

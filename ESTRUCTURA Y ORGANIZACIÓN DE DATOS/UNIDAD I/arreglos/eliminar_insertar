@@ -1,0 +1,6 @@
+arreglo=[1,2,3,4]#se crea el arreglo
+arreglo.append(10)#.append para agregar el valor 10 en el arreglo
+arreglo.insert(2,8)#.insert para insertar 8 en la posición 2
+print(arreglo)#Se imprime el arreglo
+arreglo.clear()#Se elimina todo el arreglo(queda vacío)
+print(arreglo)#Se vuelve a imprimir el arreglo

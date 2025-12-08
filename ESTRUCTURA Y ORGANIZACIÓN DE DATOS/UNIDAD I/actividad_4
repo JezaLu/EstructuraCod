@@ -1,0 +1,50 @@
+#1.-arreglo
+arreglo=["a",1,"b",2,"c",3,"d",4,"e",5,"f",6,"g",7,"h",8,"i",9,"j",10]
+arreglo.append("k")
+del arreglo[1]
+print("El arreglo es:",arreglo)
+arreglo.clear()
+print("El arreglo eliminado es:",arreglo)
+
+#2.-lista
+lista=[1,23,2,34,3,98,4,92,5,93,6,22,7,98,8]
+print("El numero en posición 0 es:",lista[0])
+lista.append(45)
+print("Lista con dato agregado:",lista)
+lista.remove(45)
+print("Lista con dato eliminado:",lista)
+
+#3.-cola
+from collections import deque
+cola=deque()
+cola.append(9)
+cola.append("p")
+cola.append(8)
+cola.append("o")
+cola.append(7)
+cola.append("i")
+cola.append(6)
+cola.append("u")
+print("La cola es: ",list(cola))
+elemento=cola.popleft()
+print("El dato eliminado es: ",elemento)
+print("La cola despues de: ",list(cola))
+
+#4.-pila
+pila=[]
+pila.append("l")
+pila.append(2)
+pila.append("k")
+pila.append(3)
+pila.append("j")
+pila.append(4)
+pila.append("h")
+pila.append(5)
+pila.append("g")
+pila.append(6)
+pila.append("f")
+pila.append(7)
+print("La pilas es:",pila)
+elemento=pila.pop()
+print("Elemeto eliminado",elemento)
+print("La pila despues de:",pila)

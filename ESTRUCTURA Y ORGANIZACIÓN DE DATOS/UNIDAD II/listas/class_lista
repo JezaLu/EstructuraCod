@@ -1,0 +1,22 @@
+#lista mediante clases
+class Lista:#definimos la clase
+    def __init__(self,dato):#definimos las variables que van a ocupar
+        self.dato = dato
+        self.siguiente = None#pq es una lista y es el siguiente dato, pa especificar q va a ver un dato
+
+n1=Lista(10)#Datos que vamos agregando
+n2=Lista(20)
+n3=Lista(30)
+n4=Lista(40)
+n5=Lista(50)
+#enlazar nuestra lista
+n1.siguiente = n2
+n2.siguiente = n3
+n3.siguiente = n4
+n4.siguiente = n5
+
+#recorremos toda la lista
+act = n1#act es una variable x y lo igualamos al primer valor
+while act is not None:#while es mientras, la variable act no tiene un valor establecido
+    print(act.dato)
+    act = act.siguiente#igualarlo

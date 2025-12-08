@@ -1,0 +1,137 @@
+CAPACIDAD=5 #se agrega al inicio para que aparezca el menu de la pila
+pila=[]
+
+def push(elemento):    
+    if len(pila) < CAPACIDAD:
+        pila.append(elemento)
+        print ("Elemento agregado", elemento)
+
+    else:
+        print ("La pila esta llena")
+
+def pop():
+    if len(pila)>0:
+        elemento=pila.pop()
+        print("elemento eliminado",elemento)
+    else:
+        print ("La pila esta vacia")
+
+def peek():
+    if len(pila)>0:
+        print ("elemento en la cima",pila[-1])
+    else:
+        print ("la pila esta vacia")
+
+def mostrar():
+    if pila:
+     print ("pila (cima - base)", list (reversed(pila)))
+    else:
+        print("pila vacia")
+
+def menu():
+    while True:
+        print("===Menu de mi pila====")
+        print("1. Agregar elemento(push)")
+        print("2.Quitar elemento(pop)")
+        print("3. Peek (Elemento en la cima)")
+        print("4. Mostrar elementos")
+        print("5. Salir")
+
+        opcion=input("Selecciona una opcion(1-5)")
+
+        if opcion=="1":
+            valor=input("Ingresa valor que quieras agregar")
+            push(valor)
+        elif opcion=="2":
+            pop()
+        elif opcion=="3":
+            peek()
+        elif opcion=="4":
+            mostrar()
+        elif opcion=="5":
+            print ("Saliste del programa")
+            break
+        else:
+            print("ingrese un dato invalido")
+
+if __name__ == "__main__": #se agregó un_ a name y main
+ menu()
+
+from collections import deque
+
+class Cola:
+    def __init__(self):     
+        self.items= deque()   #se agregó .items para la igualación
+
+    def encolar(self, item):
+        self.items.append(item)
+    
+    def desencolar(self):
+        if not self.esta_vacia():
+            return self.items.popleft() #se cambio a return y tenia parentesis de más 
+        else:
+            return None
+    def frente(self):
+        if not self.esta_vacia():
+            return self.items[0]
+        else:
+            return None
+        
+    def esta_vacia(self):
+        return len(self.items)==0 #se agregó la igualación ==0
+    
+    def tamaño(self):
+        return len(self.items)
+    
+    def mostrar (self):
+        print ("La cola es: ",list(self.items))
+
+def menu():
+        cola = Cola()
+
+        while True:
+            print("Menu de mi cola")
+            print("1. Encolar")
+            print("2. Desencolar")
+            print("3. Ver frente")
+            print("4. Esta vacio?")
+            print("5. Tamaño de la cola")
+            print("6. Mostrar")
+            print("7. Salir")
+
+            opcion = input ("Selecciona lo que quieras hacer")
+            if opcion=="1":
+                elemento=int(input("Agrega nuevo elemento numerico"))
+                cola.encolar(elemento) #se agregó la definición de .encolar
+                print ("Elemento agregado", elemento)
+
+            elif opcion=="2":
+                elemento=cola.desencolar()
+                if elemento is not None:
+                    print ("Elemento eliminado es:", elemento)
+                else:
+                    print ("La cola esta vacia")
+            
+            elif opcion=="3":
+                frente=cola.frente()
+                if frente is not None:#se agregó el not
+                    print("El frente de la cola es: ", cola.frente())
+                else:
+                    print("La cola esta vacia")
+        
+            elif opcion=="4":
+                print ("La cola esta vacia?:","Si" if cola.esta_vacia() else "No")
+
+            elif opcion=="5":
+                print ("El tamaño de la cola es:",cola.tamaño())
+
+            elif opcion=="6":
+                    cola.mostrar()
+
+            elif opcion=="7":
+                print ("Saliste del programa")
+            else:
+                print ("Dato invalido")
+
+if __name__ == "__main__": #faltaba un _ en name y main
+ menu()

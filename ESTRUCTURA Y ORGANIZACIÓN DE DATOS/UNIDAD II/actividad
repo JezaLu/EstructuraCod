@@ -1,0 +1,158 @@
+class ColaEstatica:
+    def __init__(self, tamaño_maximo):
+        self.tamaño_maximo = tamaño_maximo
+        self.cola1 = []
+
+    def esta_vacia(self):
+        return len(self.cola1) == 0
+
+    def esta_lleno(self):
+        return len(self.cola1) == self.tamaño_maximo
+
+    def enqueue(self, elemento):
+        if self.esta_lleno():
+            print("Error: La cola esta llena")
+        else:
+            self.cola1.append(elemento)
+
+    def dequeue(self):
+        if self.esta_vacia():
+            print("La cola esta vacia, no puedes eliminar")
+        else:
+            return self.cola1.pop(0)
+
+    def peek(self):
+        if self.esta_vacia():
+            return None
+        return self.cola1[0]
+
+    def size(self):
+        return len(self.cola1)
+
+    def clear(self):
+        self.cola1.clear()
+
+    def ver_todos(self):
+        return self.cola1
+
+def menu():
+    tamaño = int(input("Ingresa el tamaño máximo para la cola: "))
+    cola1 = ColaEstatica(tamaño)
+
+    while True:
+        print("===Menu de mi cola estatica===")
+        print("1. ¿La cola esta vacia? ")
+        print("2. ¿La cola esta llena? ")
+        print("3. Agregar elemento")
+        print("4. Eliminar elemento ")
+        print("5. Ver numero en la cima ")
+        print("6. Ver la longitud de la cola ")
+        print("7. Vaciar cola ")
+        print("8. Mostrar todos los elementos")
+        print("9. Salir")
+        opcion = input("Selecciona lo que quieres hacer: ")
+        
+        if opcion == "1":
+            print("¿La cola esta vacia? ", "Si" if cola1.esta_vacia() else "No")
+        elif opcion == "2":
+            print("¿La cola esta llena? ", "Si" if cola1.esta_lleno() else "No")
+        elif opcion == "3":
+            elemento = input("Agrega nuevo elemento: ")
+            cola1.enqueue(elemento)
+            print("Elemento agregado: ", elemento)
+        elif opcion == "4":
+            elemento = cola1.dequeue()
+            if elemento is not None:
+                print("Elemento eliminado: ", elemento)
+        elif opcion == "5":
+            elemento_cima = cola1.peek()
+            print("El elemento en la cima es: ", elemento_cima)
+        elif opcion == "6":
+            print("El tamaño de la cola es: ", cola1.size())
+        elif opcion == "7":
+            print("La cola vacia es: ", cola1.clear())
+        elif opcion == "8":
+            print("Elementos en la cola: ", cola1.ver_todos())
+        elif opcion == "9":
+            print("Saliste del programa")
+            break
+        else:
+            print("Dato invalido")
+
+if __name__ == "__main__":
+    menu()
+
+#Dinamico
+from collections import deque
+
+class Cola:
+    def __init__(self): 
+        self.items = deque()
+
+    def encolar(self, item):
+        self.items.append(item)
+
+    def desencolar(self):
+        if not self.esta_vacia():
+            return self.items.popleft()
+        else:
+            return None
+        
+    def frente(self):
+        if not self.esta_vacia():
+            return self.items[0]
+        else:
+            return None
+
+    def esta_vacia(self):
+        return len(self.items)==0
+
+    def tamaño(self):
+        return len(self.items)
+
+    def mostrar(self):
+        print("la cola es: ",list(self.items))  
+
+def menu():
+        cola = Cola()
+
+        while True:
+            print("===Menu de mi cola dinamica===")
+            print("1. Encolar ")
+            print("2. Desencolar ")
+            print("3. Ver frente")
+            print("4. ¿esta vacia? ")
+            print("5. Tamaño de la cola ")
+            print("6. Mostrar ")
+            print("7. Salir ")
+            opcion= input("Selecciona lo que quieres hacer: ")
+            if opcion=="1":
+                elemento=input("Agrega nuevo elemento: ")
+                cola.encolar(elemento)
+                print ("Elemento agregado: ", elemento)
+            elif opcion=="2":
+                elemento=cola.desencolar()
+                if elemento is not None:
+                    print ("Elemento eliminado: ", elemento)
+                else:
+                    print ("la cola esta vacia")
+            elif opcion=="3":
+                frente=cola.frente()
+                if frente is not None:
+                    print ("La frente de la cola es: ", frente)
+                else:
+                    print("La cola esta vacia")
+            elif opcion=="4":
+                print("¿La cola esta vacia? " ,"Si" if cola.esta_vacia()else "No")
+            elif opcion=="5":
+                print("El tamaño de la cola es: ", cola.tamaño())
+            elif opcion=="6":
+                cola.mostrar()
+            elif opcion=="7":
+                print ("Saliste del programa")
+                break
+            else:
+                print("Dato invalido")
+
+if __name__ == "__main__":
+    menu()

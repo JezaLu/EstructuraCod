@@ -1,0 +1,20 @@
+cola=[]
+#.append para agregar datos a la cola
+cola.append("a")
+cola.append("b")
+cola.append("c")
+print("La cola es:",cola)#Se imprime la cola
+#.pop para eliminar datos con posición
+elemento=cola.pop(0)
+print("La cola después:",cola)
+
+cola1=[]#creamos una lista vacía
+#agregamos los valores a la lista con .append
+cola1.append("Yamile")
+cola1.append(1)
+cola1.append("Getsemani")
+cola1.append(5)
+cola1.append(6)
+print("La cola es:",cola1)#imprimimos la cola
+elemento=cola1.pop(0)#eliminamos el valor en la posición 0 con .pop
+print("La cola después:",cola1)#ejecutamos la cola con valor eliminado

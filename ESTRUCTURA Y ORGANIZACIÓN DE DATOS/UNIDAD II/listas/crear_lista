@@ -1,0 +1,53 @@
+#crear lista
+lista=[]
+#agregar elementos numericos
+lista.append(10)
+lista.append(20)
+lista.append(30)
+lista.append(40)
+lista.append(50)
+print("el resultado de mi lista es: ",lista)#imprimir la lista
+
+lista.remove(40)#eliminar un valor en especifico
+print("la lista despues de eliminar el numero 40: ",lista)
+
+elemento=lista.pop(1)#eliminar valor por indice
+print("el numero eliminado es: ",elemento)
+print("la lista despues de eliminar es: ",lista)
+
+#buscar elementos/un metodo es cuando metemos un for
+existe = 100 in lista
+print ("¿El numero 100 existe en mi lista? ", existe)#imprime true si existe y false si no existe
+existe1 = 10 in lista
+print ("¿El numero 10 existe en mi lista? ", existe1)
+existe2 = 20 in lista
+print ("¿El numero 20 existe en mi lista? ", existe2)
+existe3 = 30 in lista
+print ("¿El numero 30 existe en mi lista? ", existe3)
+existe4 = 40 in lista
+print ("¿Existe numero 40 en mi lista?", existe4)
+existe5 = 50 in lista
+print ("¿El numero 50 existe en mi lista? ", existe5)
+
+#imprimir la posicion del numero
+indice = lista.index(50)#index sirve para saber posicion
+print("la posisicion es: ", indice)#imprime en que posicion se encuentra el valor
+
+#mostrar elementos
+print ("los elementos son: ", lista)
+#Recorrer elementos
+for elemento1 in lista:#for=para
+    print("el elemento ", elemento1)
+
+#insertar multiples elementos
+lista.extend([90,100,110,120,200,300])#sin necesidad .append
+print("despues de agregar multiples datos la lista es: ", lista)
+lista.extend([400,500,600,700,800,900])#.extend para agrgar varios elementos en una sola fila
+print("La nueva lista es: ", lista)
+
+#saber la longitud de mi lista(cuantos datos tiene mi lista)
+print("la longitud de la lista es: ",len(lista))#len para saber la longitud de la lista
+
+#ordenar mi lista
+lista.sort()#.sort/ordenar la lista de menor a mayor
+print("mi lista ordenada es: ", lista)
